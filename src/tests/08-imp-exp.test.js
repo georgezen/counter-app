@@ -25,11 +25,10 @@ describe("pruebas sobre import y export", () => {
     });
 
     test("la funcion getHeroesByOwner retornara 2 heroes de Marvel", () => {
-        let owner = "Marvel1";
+        let owner = "Marvel";
         const owne = getHeroesByOwner(owner);
-        const heroeOwner = heroes.filter((hero) => hero.owner === owner);
-        let largo = heroeOwner.length;
-        expect(largo).toBe(2);
+        
+        expect(owne.length).toBe(2);
     });
 });
 /* en el expect se recibe de manera real en una prueba, en el .toBe o toEqual se recibe lo que tu esperas que reciba es decir lo imaginario */
